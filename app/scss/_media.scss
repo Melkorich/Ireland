@@ -4,3 +4,11 @@ $lg: 992px;
 $md: 768px;
 $sm: 576px;
 $xs: 480px;
+
+@media (max-width: 1400px) {
+  .header {
+    &::after {
+      width: 433px;
+    }  
+  }
+}
