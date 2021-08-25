@@ -5,10 +5,71 @@ $md: 768px;
 $sm: 576px;
 $xs: 480px;
 
+@media (max-width: 1550px) {
+  .benefits__item {
+    &:first-child {
+      top: 150px;
+      left: 20px;
+     }
+ 
+     &:nth-child(2) {
+       top: 250px;
+     }
+ 
+     &:nth-child(3) {
+       bottom: 150px;
+     }
+  }
+
+}
+
 @media (max-width: 1400px) {
   .header {
     &::after {
       width: 433px;
     }  
+  }
+
+  .benefits__item {
+    &:first-child {
+      top: 170px;
+      left: 65px;
+     }
+ 
+     &:nth-child(2) {
+       top: 260px;
+     }
+ 
+     &:nth-child(3) {
+       bottom: 155px;
+     }
+  }
+}
+
+@media (max-width: 1380px) {
+  .benefits__wrapper {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+
+
+  .benefits__title {
+    margin-bottom: 140px;
+  }
+
+  .benefits__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .benefits__item {
+    position: static;
+    margin: 30px;
   }
 }
