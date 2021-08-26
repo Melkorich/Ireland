@@ -2,6 +2,7 @@
 @import 'fonts';
 @import 'mixin';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 /*header start*/
@@ -169,6 +170,12 @@
   width: 100%;
   max-height: 724px;
   height: 100%;
+}
+
+.header__slider-item {
+  img {
+    object-fit: cover;
+  }
 }
 
 .slider-dots {
@@ -376,12 +383,10 @@
 /*section benefits start*/
 
 .benefits {
-  // position: relative;
   padding-bottom: 142px;
 
   
   &__wrapper {
-    height: 820px;
     position: relative;
 
     &::before {
@@ -395,18 +400,18 @@
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
-      // height: 810px;
+      height: 640px;
     }
   }
    
   &__inner {
     position: relative;
-    width: 100%;
-    height: 830px;
+    height: 635px;
   }
 
   &__title {
     text-align: center;
+    margin: 0 0 100px 0;
   }
 
   &__item {
@@ -416,18 +421,22 @@
     position: absolute;
 
     &:first-child {
-     top: 140px;
-     left: 0px;
+      top: 80px;
+      left: 50px;
     }
 
     &:nth-child(2) {
-     top: 240px;
-     right: 0;
+      top: 170px;
+      right: 0;
     }
 
     &:nth-child(3) {
-      bottom: 125px;
-      left: 340px;
+      bottom: 50px;
+      left: 355px;
+
+      img {
+        top: -10px;
+      }
     }
 
   }
@@ -456,11 +465,133 @@
 
   &__text {
     font-size: 20px;
-    max-width: 330px;
+    max-width: 328px;
   }
 } 
 
 /*section benefits end*/
+
+/*section tours start*/
+
+.tours {
+  padding: 0 0 170px 0;
+ 
+  &__title {
+    margin: 0 0 70px 0;
+  }
+
+  &__rating {
+    margin: 0 0 25px 0;
+  }
+}
+
+.jq-ry-container {
+  padding: 0;
+}
+
+.tours-slider {
+  max-width: 906px;
+  width: 100%;
+  min-height: 506px;
+  margin: 0 auto;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding: 92px 50px 120px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 33px;
+    color: #e7e7e7;
+    margin: 0 0 25px 0;
+    @include line-climp(2);
+  }
+
+  &__text {
+    max-width: 550px;
+    font-size: 20px;
+    line-height: 22px;
+    margin: 0 0 25px 0;
+    @include line-climp(6);
+
+    a {
+      color: #e7e7e7;
+      text-decoration: underline;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding-right: 50px;
+    position: relative;
+    max-width: 200px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('../images/tours/arrow.svg');
+      background-repeat: no-repeat;
+      top: 8px;
+      right: -8px;
+      width: 55px;
+      height: 10px;
+    }
+  }
+  
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+
+    .slick-active {
+      button {
+        background-color: #A5964C;
+      }
+    }
+  }
+  
+  .slick-dots li {
+    line-height: 0;
+    padding: 0 7px;
+  }
+  
+  .slick-dots li {
+    button {
+      font-size: 0;
+      width: 14px;
+      height: 13px;
+      background-color: #CECECE;
+      border: transparent;
+      border-radius: 50%;
+      outline: none;
+
+      &:focus {
+        background-color: #A5964C;
+      }
+
+      &:hover {
+        background-color: rgba(#CECECE, 0.5);
+      }
+
+      &:active {
+        background-color: #A5964C;
+      }
+
+    }
+  }
+}
+
+/*section tours end*/
+
+/*section dream start*/
+
+/*section dream end*/
 
 
 
