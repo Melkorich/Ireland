@@ -166,10 +166,10 @@
 }
 
 .header__slider {
+
   max-width: 1098px;
   width: 100%;
   max-height: 724px;
-  height: 100%;
 }
 
 .header__slider-item {
@@ -474,7 +474,7 @@
 /*section tours start*/
 
 .tours {
-  padding: 0 0 170px 0;
+  margin-bottom: 212px;
  
   &__title {
     margin: 0 0 70px 0;
@@ -492,7 +492,7 @@
 .tours-slider {
   max-width: 906px;
   width: 100%;
-  min-height: 506px;
+  height: 506px;
   margin: 0 auto;
 
   &__item {
@@ -591,7 +591,264 @@
 
 /*section dream start*/
 
+.dream {
+  position: relative;
+  background-image:url('../images/dream/bg1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -20px;
+    width: 100%;
+    height: 80px;
+    z-index: 6;
+    background: linear-gradient(0deg, rgba(28,28,28,1) 9%, rgba(28,28,28,0.8267682072829132) 38%, rgba(28,28,28,0.34217436974789917) 77%);
+  }
+
+
+  &__wrapper {
+    position: relative;
+    height: 870px;
+    background: linear-gradient(180deg, #242424 2.4%, rgba(36, 36, 36, 0) 61.77%, #1C1C1C 93.02%),linear-gradient(0deg, rgba(36, 36, 36, 0), rgba(36, 36, 36, 0));
+    
+    &::before {
+      position: absolute;
+      content: '';
+      background-image: url('../images/dream/bg2.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: 220px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 5;
+    }
+  }
+
+
+  &__title {
+    font-family: 'Libre Caslon Display', serif;
+    font-size: 50px;
+    line-height: 55px;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0 0 160px 0;
+
+    span {
+      display: block;
+    }
+
+    span:first-child {
+      margin-bottom: 60px;
+      position: relative;
+      z-index: 6;
+    }
+
+    span:nth-child(2) {
+      font-size: 150px;
+      line-height: 166px;
+      color: #fff;
+      letter-spacing: 0.05em;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 60px;
+      position: relative;
+      z-index: 4;
+    }
+
+    span:nth-child(3) {
+      text-align: right;
+      position: relative;
+      z-index: 6;
+    }
+  }
+
+  &__offer {
+    max-width: 654px;
+    width: 100%;
+    border: 1px solid #cecece;
+    padding: 45px 55px;
+    position: relative;
+    z-index: 6;
+
+    strong {
+      color: #fff;
+    }
+  }
+
+  &__descr {
+    max-width: 445px;
+    font-size: 20px;
+    line-height: 22px;
+    margin: 0 0 88px 0;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+  }
+
+  &__partners {
+    display: flex;
+    align-items: center;
+  }
+
+  &__partner:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  &__link {
+    display: inline-block;
+    padding-left: 40px;
+  }
+}
+
 /*section dream end*/
+
+
+.reviews {
+  padding: 100px 0 160px;
+  background: #1C1C1C;
+
+  &__title {
+    font-family: 'Libre Caslon Display', serif;
+    font-size: 55px;
+    line-height: 61px;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0 0 120px 0;
+  }
+
+  &__wrapper {
+   position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 125px;
+      height: 90px;
+    }
+
+    &::before {
+      top: -80px;
+      left:0;
+      background-image:url('../images/reviews/brackets-left.svg');
+    }
+  
+    &::after {
+      bottom: -80px;
+      right: 0;
+      background-image:url('../images/reviews/brackets-right.svg');
+    }
+  }
+}
+
+.reviews-slider {
+  max-width: 720px;
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+
+  &__subtitle {
+    font-size: 24px;
+    line-height: 27px;
+    margin: 0 0 15px 0;
+  }
+
+  .reviews__rating {
+    margin: 0 0 25px 0;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 300;
+    max-width: 445px;
+    height: 180px;
+    overflow: auto;
+  }
+
+  &__item {
+    display: flex !important;
+    padding: 10px 5px 10px 5px;
+    overflow: hidden;
+  }
+
+  &__person {
+    margin: 0 70px 0 0;
+  }
+
+  &__image {
+    width: 181px;
+    height: 181px;
+    margin: 0 0 15px 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .slick-arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9;
+    background-color: transparent;
+    transition: stroke 0.3;;
+
+    &:hover path{
+      stroke:#A5964C;
+    }
+  }
+
+  .arrow-left {
+    left: -60px;
+  }
+  
+  .arrow-right{
+    right: -60px;
+  }
+
+  .reviews-slider__text::-webkit-scrollbar {
+    display: none;
+  }
+
+  .reviews-slider__text:hover::-webkit-scrollbar {
+    display: block;
+  }
+  
+  .reviews-slider__text::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  .reviews-slider__text::-webkit-scrollbar-track {
+    background: rgba(#A5964C, 0.6);
+  }
+
+  .reviews-slider__text::-webkit-scrollbar-thumb {
+    background: rgb(209, 162, 91);
+    border-radius: 10px;
+    border: 1px solid #ad916a;
+  }
+}
+
+.contancts {
+  padding-top: 104px;
+  background-color:  #1C1C1C;
+}
 
 
 
