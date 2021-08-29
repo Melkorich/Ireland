@@ -9,6 +9,7 @@
 
 .header {
   position: relative;
+
   &::after {
     content: '';
     position: absolute;
@@ -18,6 +19,7 @@
     height: 690px;
     background-color: #1c1c1c;
   }
+
   .container {
     position: relative;
   }
@@ -56,6 +58,7 @@
     transform: rotate(90deg);
     position: relative;
   }
+
   &__aside-link--follow {
     font-size: 17px;
     line-height: 23px;
@@ -69,24 +72,22 @@
   &__title {
     position: absolute;
     top: 35%;
-    // left: 240px;
     right: 18%;
     max-width: 1240px;
     font-size: 70px;
     line-height: 78px;
     font-family: 'Libre Caslon Display', serif;
+    font-weight: 300;
     color: #E7E7E7;
     letter-spacing: 0.045em;
     text-transform: uppercase;
     z-index: 10;
-    font-weight: 300;
 
     span {
       display: block;
       font-size: 110px;
       line-height: 122px;
       text-align: right;
-      // margin-right: -130px;
     }
   }
 
@@ -94,12 +95,12 @@
     position: absolute;
     right: 90px;
     bottom: -50px;
-    z-index: 5;
+    padding: 130px 50px 90px;
+    font-weight: 300;
     max-width: 620px;
     height: 410px;
+    z-index: 5;
     background-color:rgba(22, 22, 22, 0.5);
-    padding: 130px 50px 90px 50px;
-    font-weight: 300;
   }
 
   &__text {
@@ -158,18 +159,27 @@
     font-size: 21px;
     line-height: 28px;
     padding-bottom: 1px;
+    outline: none;
+
+    &:focus {
+      color: #fff;
+    }
 
     &:hover {
+      border-bottom: 1px solid #CECECE;
+    }
+
+    &:active {
+      color: #fff;
       border-bottom: 1px solid #CECECE;
     }
   }
 }
 
 .header__slider {
-
   max-width: 1098px;
   width: 100%;
-  max-height: 724px;
+  // height: 724px;
 }
 
 .header__slider-item {
@@ -221,7 +231,6 @@
       &:active {
         background-color: #FFF;
       }
-
     }
   }
 
@@ -246,14 +255,14 @@
   &__text {
     max-width: 840px;
     width: 100%;
-    border: 1px solid #CECECE;
     padding: 34px 40px;
     line-height: 29px;
     font-weight: 300;
-    color: rgba(#CECECE, 0.7);
     margin-bottom: 40px;
+    border: 1px solid #CECECE;
+    color: rgba(#CECECE, 0.7);
 
-    p{
+    p {
       max-width: 689px;
     }
 
@@ -360,8 +369,8 @@
     height: 358px;
 
     img {
-      min-width: 100%;
-      min-height: 100%;
+      width: 100%;
+      height: 100%;
       display: inline-block;
       margin: 0;
       opacity: 0.5;
@@ -385,7 +394,6 @@
 .benefits {
   padding-bottom: 142px;
 
-  
   &__wrapper {
     position: relative;
 
@@ -438,7 +446,6 @@
         top: -10px;
       }
     }
-
   }
 
   &__image {
@@ -454,7 +461,6 @@
     left: 0;
     object-fit: contain;
   }
-
 
   &__subtitle {
     font-size: 30px;
@@ -538,9 +544,16 @@
       background-image: url('../images/tours/arrow.svg');
       background-repeat: no-repeat;
       top: 8px;
-      right: -8px;
+      right: -10px;
       width: 55px;
       height: 10px;
+      transition: right 0.3s;
+    }
+
+    &:hover {
+      &::after {
+        right: -15px;
+      }
     }
   }
   
@@ -604,11 +617,10 @@
     left: 0;
     bottom: -20px;
     width: 100%;
-    height: 80px;
+    height: 60px;
     z-index: 6;
     background: linear-gradient(0deg, rgba(28,28,28,1) 9%, rgba(28,28,28,0.8267682072829132) 38%, rgba(28,28,28,0.34217436974789917) 77%);
   }
-
 
   &__wrapper {
     position: relative;
@@ -628,7 +640,6 @@
       z-index: 5;
     }
   }
-
 
   &__title {
     font-family: 'Libre Caslon Display', serif;
@@ -671,7 +682,7 @@
     max-width: 654px;
     width: 100%;
     border: 1px solid #cecece;
-    padding: 45px 55px;
+    padding: 45px 20px 45px 55px;
     position: relative;
     z-index: 6;
 
@@ -687,31 +698,53 @@
     margin: 0 0 88px 0;
   }
 
-  &__links {
-    display: flex;
-    align-items: center;
-  }
-
+  &__links,
   &__partners {
     display: flex;
     align-items: center;
   }
 
   &__partner:not(:last-child) {
-    margin-right: 12px;
+    margin-right: 14px;
+  }
+
+  &__partner:last-child {
+    margin: 0 40px 0 0;
   }
 
   &__link {
     display: inline-block;
-    padding-left: 40px;
+    position: relative;
+    font-size: 25px;
+    line-height: 33px;
+    color: #fff;
+
+    &::before {
+      position: absolute;
+      content: '';
+      background-image:url('../images/dream/arrow.svg');
+      background-repeat:no-repeat;
+      left: 0;
+      bottom: -12px;
+      width: 156px;
+      height: 8px;
+      transition: left 0.3s;
+    }
+
+    &:hover {
+      &::before {
+       left: 15px;
+      }
+    }
   }
 }
 
 /*section dream end*/
 
+/*section reviews start*/
 
 .reviews {
-  padding: 100px 0 160px;
+  padding: 100px 0 282px;
   background: #1C1C1C;
 
   &__title {
@@ -775,7 +808,7 @@
 
   &__item {
     display: flex !important;
-    padding: 10px 5px 10px 5px;
+    padding: 10px 5px 10px;
     overflow: hidden;
   }
 
@@ -810,7 +843,7 @@
     transition: stroke 0.3;;
 
     &:hover path{
-      stroke:#A5964C;
+      stroke:#fff;
     }
   }
 
@@ -845,10 +878,185 @@
   }
 }
 
-.contancts {
-  padding-top: 104px;
+/*section reviews end*/
+
+/*section contacts start*/
+
+.contacts {
   background-color:  #1C1C1C;
+  background-image:url('../images/contacts/bg.jpg');
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 664px;
+
+  &__inner {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__form {
+    max-width: 526px;
+    background-color: rgba(36, 36, 36, 0.85);
+    backdrop-filter: blur(7px);
+    padding: 41px 61px 102px;
+    margin-top: -102px;
+  }
+
+  &__title {
+    text-align: center;
+    font-family: 'Libre Caslon Display', serif;
+    font-weight: normal;
+    margin: 0 0 40px 0;
+  }
+
+  &__label {
+    border-bottom: 1px solid #929292;
+    margin: 0 0 65px 0;
+    padding: 8px 0px 8px 0px;
+  }
+
+  .label__textarea {
+    border-bottom: none;
+  }
+
+  &__input {
+    background-color: transparent;
+    border: transparent;
+    font-size: 26px;
+    line-height: 29px;
+    padding: 0;
+    margin: 0 0 65px 0;
+    color: #cecece;
+    outline: none;
+    width: 100%;
+  }
+
+  &__textarea {
+    background-color: transparent;
+    border: transparent;
+    resize: none;
+    width: 100%;
+    max-height: 100px;
+    margin: 0 0 102px 0;
+    border-bottom: 1px solid #929292;
+    padding: 0;
+    color: #cecece;
+    outline: none;
+    font-size: 26px;
+    line-height: 29px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &::placeholder {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &__btn {
+    background-color: transparent;
+    border: 1px solid #cecece;
+    color: #cecece;
+    padding: 13px 34px;
+    font-size: 26px;
+    line-height: 29px;
+    transition: color 0.3s, background-color 0.3s;
+    font-weight: 300;
+
+    &:hover {
+      color: #161616;
+      background-color: rgba(#e7e7e7, 0.5);
+    }
+  }
+
+  &__link {
+    background-color: rgba(36, 36, 36, 0.85);
+    backdrop-filter: blur(7px);
+    border: transparent;
+    padding: 10px 224px 10px 40px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 27px;
+    position: relative;
+    transition: background-color 0.3s;
+
+    &::before {
+      position: absolute;
+      content: '';
+      background-image:url('../images/contacts/arrow.svg');
+      background-repeat:no-repeat;
+      top: 20px;
+      right: 40px;
+      width: 85px;
+      height: 8px;
+      transition: right 0.3s;
+    }
+
+    &:hover {
+      background-color: rgba(#e7e7e7, 0.2);
+
+      &::before {
+       right: 20px;
+      }
+    }
+  }
 }
+
+/*section contacts end*/
+
+/*footer start*/
+
+.footer {
+  background-color: #1C1C1C;
+
+  &__inner {
+    padding: 60px 160px 30px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+
+  &__menu {
+    margin: 0 0 35px 0;
+  }
+
+  &__icons {
+    display: flex;
+    margin: 0 0 35px 0;
+  }
+
+  &__icon:not(:last-child) {
+    margin-right: 35px;
+  }
+  
+  &__icon-link {
+    outline: none;
+  }
+
+  &__icon-link:focus,
+  &__icon-link:hover{
+    path {
+     fill: #fff;
+    }
+  }
+
+  &__icon-link:active {
+    path {
+      opacity: 0.3;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 24px;
+    color: #929292;
+  }
+}
+
+/*footer end*/
 
 
 
