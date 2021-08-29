@@ -633,7 +633,7 @@
       background-image: url('../images/dream/bg2.png');
       background-repeat: no-repeat;
       background-size: cover;
-      top: 220px;
+      top: 230px;
       left: 0;
       right: 0;
       bottom: 0;
@@ -802,7 +802,7 @@
     line-height: 22px;
     font-weight: 300;
     max-width: 445px;
-    height: 180px;
+    max-height: 180px;
     overflow: auto;
   }
 
@@ -875,6 +875,48 @@
     background: rgb(209, 162, 91);
     border-radius: 10px;
     border: 1px solid #ad916a;
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+
+    .slick-active {
+      button {
+        background-color: #A5964C;
+      }
+    }
+  }
+  
+  .slick-dots li {
+    line-height: 0;
+    padding: 0 7px;
+  }
+  
+  .slick-dots li {
+    button {
+      font-size: 0;
+      width: 14px;
+      height: 13px;
+      background-color: #CECECE;
+      border: transparent;
+      border-radius: 50%;
+      outline: none;
+
+      &:focus {
+        background-color: #A5964C;
+      }
+
+      &:hover {
+        background-color: rgba(#CECECE, 0.5);
+      }
+
+      &:active {
+        background-color: #A5964C;
+      }
+
+    }
   }
 }
 
@@ -1011,21 +1053,44 @@
 
 .footer {
   background-color: #1C1C1C;
+  text-align: center;
+  padding: 60px 10px 30px;
 
-  &__inner {
-    padding: 60px 160px 30px;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-  }
 
   &__menu {
     margin: 0 0 35px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    margin: 0px 16px ; 
+  }
+
+  &__link {
+    font-size: 21px;
+    line-height: 28px;
+    padding-bottom: 1px;
+    outline: none;
+
+    &:focus {
+      color: #fff;
+    }
+
+    &:hover {
+      border-bottom: 1px solid #CECECE;
+    }
+
+    &:active {
+      color: #fff;
+      border-bottom: 1px solid #CECECE;
+    }
   }
 
   &__icons {
     display: flex;
     margin: 0 0 35px 0;
+    justify-content: center;
   }
 
   &__icon:not(:last-child) {

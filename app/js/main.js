@@ -21,7 +21,18 @@ $(function(){
 
   $('.reviews-slider').slick({
     prevArrow: '<svg class="arrow-left" width="20" height="36" viewBox="0 0 20 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.3076 35L0.999925 18L19.3076 1" stroke="#929292"/></svg>',
-    nextArrow: '<svg class="arrow-right" width="21" height="36" viewBox="0 0 21 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L19.3077 18L1 35" stroke="#929292"/></svg>'
+    nextArrow: '<svg class="arrow-right" width="21" height="36" viewBox="0 0 21 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L19.3077 18L1 35" stroke="#929292"/></svg>',
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 900,
+        settings: {
+          arrows: false,
+          dots: true
+        }
+      },
+    ]
+  
   });
 
   $(".tours__rating, .reviews__rating").rateYo({

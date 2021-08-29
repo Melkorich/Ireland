@@ -60,6 +60,14 @@ $xs: 480px;
       left: 355px;
     }
   }
+  
+  .dream__wrapper {
+    &::before {
+      left: -200px;
+    }
+  }
+  
+
 }
 
 @media (max-width: 1280px) {
@@ -71,6 +79,14 @@ $xs: 480px;
 }
 
 @media (max-width: 1200px) {
+
+  .tours {
+    margin-bottom: 150px;
+  }
+
+  .contacts__inner {
+    margin-bottom: 35px;
+  }
 
   .benefits__title {
     margin-bottom: 140px;
@@ -86,5 +102,295 @@ $xs: 480px;
   .benefits__item {
     position: static;
     margin: 30px;
+  }
+}
+
+@media (max-width: 970px) {
+
+  .dream__wrapper {
+    height: 830px;
+    &::before {
+      // left: -300px;
+      top: 210px;
+    }
+  }
+
+  .footer__menu {
+    flex-wrap: wrap;
+  }
+
+  .footer__item {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .reviews-slider {
+    max-width: 680px;
+    height: 400px;
+  }
+
+  .reviews-slider__person {
+    margin: 0 40px 0 0;
+  }
+}
+
+@media (max-width: 750px) {
+
+  .title {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .dream  {
+    &::before {
+      display: none;
+    }
+  }
+
+  .dream__wrapper {
+    height:790px;
+    &::before {
+      top: 250px;
+      left: -300px;
+    }
+  }
+
+  .dream__title {
+    font-size: 40px;
+    line-height: 46px;
+    margin: 0px 0 130px 0;
+
+    span:first-child {
+      margin-bottom: 40px;
+    }
+
+    span:nth-child(2) {
+      font-size: 110px;
+      line-height: 120px;
+      margin-bottom: 40px;
+    }
+
+    span:nth-child(3) {
+      text-align: right;
+    }
+  }
+
+  .reviews {
+    padding: 0 0 200px;
+  }
+  
+  .reviews__wrapper {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .reviews__title {
+    margin: 0 0 20px 0;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  .reviews-slider__item {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .reviews-slider__person {
+    margin: 0;
+  }
+
+  .reviews-slider__text {
+    max-width: 100%;
+    font-size: 18px;
+    line-height: 20px;
+    height: 100%;
+  }
+
+  .reviews-slider__image {
+    width: 160px;
+    height: 160px;
+  }
+
+  .reviews-slider__name {
+    font-size: 18px;
+  }
+
+  .reviews-slider__subtitle {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .reviews-slider__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacts__form {
+    margin-top: 0;
+    padding: 20px 40px;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .tours {
+    margin-bottom: 90px;
+  }
+
+  .dream__wrapper {
+    height: 640px;
+    &::before {
+      top: 190px;
+      left: -210px;
+    }
+  }
+
+  .dream__title {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 0 0 70px 0;
+
+    span:first-child {
+      margin-bottom: 30px;
+    }
+
+    span:nth-child(2) {
+      font-size: 80px;
+      line-height: 100px;
+      margin-bottom: 30px;
+    }
+
+    span:nth-child(3) {
+      text-align: right;
+    }
+  }
+
+  .dream__offer {
+    padding: 20px 20px 30px 20px;
+  }
+
+  .dream__descr {
+    margin: 0 0 25px 0;
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .dream__links {
+    flex-wrap: wrap;
+  }
+
+  .dream__partners {
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+  }
+
+  .dream__link {
+    font-size: 20px;
+    line-height: 28px;
+    display: block;
+    width: 100%;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+
+  .dream__wrapper {
+    &::before {
+      display: none;
+    }
+  }
+
+  .dream__title {
+    margin: 0 0 50px 0;
+
+    span:first-child {
+      margin-bottom: 30px;
+    }
+
+    span:nth-child(2) {
+      font-size: 80px;
+      line-height: 100px;
+      margin-bottom: 30px;
+    }
+
+    span:nth-child(3) {
+      text-align: right;
+    }
+  }
+
+  .dream__offer {
+    padding: 10px;
+  }
+
+  .dream__partner {
+    margin: 0 14px 20px 0;
+  }
+
+  .dream__partner:last-child {
+    margin-right: 0;
+  }
+
+  .contacts__btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .contacts__textarea {
+    margin: 0 0 80px 0;
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .contacts__input {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .contacts__link {
+    padding: 10px 20px;
+    font-size: 20px;
+    line-height: 27px;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+
+  .dream {
+    padding-bottom: 50px;
+  }
+
+  .dream__title {
+    padding-top: 0;
+  }
+
+  .footer__menu {
+    flex-direction: column;
+  }
+
+  .footer__item {
+    margin: 0;
+  }
+
+  .footer__item:not(:last-child) {
+    margin-bottom: 15px;
   }
 }
