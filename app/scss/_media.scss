@@ -73,7 +73,8 @@ $xs: 480px;
 @media (max-width: 1280px) {
   .benefits__wrapper {
     &::before {
-      display: none;
+      background-image:url('../images/benefits/line2.svg');
+      opacity: 0.5;
     }
   }
 }
@@ -92,6 +93,28 @@ $xs: 480px;
     margin-bottom: 140px;
   }
 
+  .benefits__item {
+
+    &:first-child {
+      top: 90px;
+      left: 85px;
+    }
+ 
+    &:nth-child(2) {
+      top: 180px;
+    }
+  
+    &:nth-child(3) {
+      bottom: 65px;
+      left: 310px;
+    }
+  }
+
+  
+}
+
+@media (max-width: 1040px) {
+  
   .benefits__inner {
     display: flex;
     flex-wrap: wrap;
@@ -102,6 +125,12 @@ $xs: 480px;
   .benefits__item {
     position: static;
     margin: 30px;
+  }
+
+  .benefits__wrapper {
+    &::before {
+      display: none;
+    }
   }
 }
 
@@ -125,6 +154,11 @@ $xs: 480px;
 }
 
 @media (max-width: 900px) {
+
+  .benefits__title {
+    margin-bottom: 110px;
+  }
+
   .reviews-slider {
     max-width: 680px;
     height: 400px;
@@ -240,8 +274,22 @@ $xs: 480px;
 
 @media (max-width: 650px) {
 
+  .benefits__title {
+    margin-bottom: 80px;
+    font-size: 35px;
+    line-height: 35px;
+  }
+
+  .tours-slider__item {
+    padding: 60px 20px 60px;
+  }
+
   .tours {
-    margin-bottom: 90px;
+    margin-bottom: 20px;
+  }
+
+  .tours__title {
+    margin: 0 0 30px 0;
   }
 
   .dream__wrapper {
@@ -302,7 +350,33 @@ $xs: 480px;
   }
 }
 
+@media (max-width: 550px) {
+
+  .benefits {
+    padding-bottom: 90px;
+  }
+
+  .benefits__subtitle {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+
 @media (max-width: 450px) {
+
+  .benefits__text {
+    font-size: 18px;
+  }
+
+  .benefits__image {
+    height: 60px;
+    min-width: 60px;
+    margin: 0 20px 0 0;
+  }
+
+  .benefits__img {
+    top: 0;
+  }
 
   .dream__wrapper {
     &::before {
@@ -373,6 +447,20 @@ $xs: 480px;
 }
 
 @media (max-width: 400px) {
+
+  .benefits__title {
+    margin-bottom: 60px;
+    font-size: 35px;
+    line-height: 35px;
+  }
+
+  .benefits {
+    padding-bottom: 60px;
+  }
+
+  .benefits__item {
+    margin: 15px 0;
+  }
 
   .dream {
     padding-bottom: 50px;
