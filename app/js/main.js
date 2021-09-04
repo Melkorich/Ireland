@@ -1,5 +1,16 @@
 $(function(){
 
+  $('.burger, menu').on('click', function() {
+    $('.menu__list').toggleClass('menu__list--active');
+    $('.burger').toggleClass('burger--active');
+    $('body').toggleClass('body--active');
+  });
+
+  $('.menu__link').on('click', function() {
+    $('.menu__list').removeClass('menu__list--active');
+    $('body').removeClass('body--active');
+  });
+
   $('.header__slider').slick({
     arrows: false,
     fade: true,
@@ -32,7 +43,6 @@ $(function(){
         }
       },
     ]
-  
   });
 
   $(".tours__rating, .reviews__rating").rateYo({
@@ -42,6 +52,14 @@ $(function(){
     spacing   : '3px',
     readOnly: true,
   });
+
+  $(function(){
+    $("a[href^='#']").click(function(){
+            var _href = $(this).attr("href");
+            $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, 1000);
+            return false;
+    });
+});
 
 
  

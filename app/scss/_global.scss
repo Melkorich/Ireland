@@ -9,6 +9,10 @@ body {
   background-color: #242424;
 }
 
+.body--active {
+  overflow: hidden;
+}
+
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;

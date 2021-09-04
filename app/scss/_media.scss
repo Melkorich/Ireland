@@ -59,11 +59,9 @@
       left: -200px;
     }
   }
-  
-
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1290px) {
 
   .visit__item::before {
     font-size: 120px;
@@ -74,6 +72,9 @@
   .visit__item:nth-child(2)::before {
     left: 34%;
   }
+}
+
+@media (max-width: 1280px) {
 
   .visit__image {
     width: 550px;
@@ -93,6 +94,27 @@
 }
 
 @media (max-width: 1200px) {
+
+  .header__title {
+    padding: 0 10px;
+    font-size: 60px;
+    line-height: 75px;
+    left: 0;
+    top: 25%;
+
+    span {
+      font-size: 100px;
+      line-height: 115px;
+    }
+  }
+
+  .header__book {
+    bottom: 100px;
+    padding: 40px 15px;
+    max-width: 540px;
+    height: 270px;
+    left: 0;
+  } 
 
   .tours {
     margin-bottom: 150px;
@@ -137,6 +159,32 @@
     }
   }
 
+  .header::after {
+    width: 220px;
+  } 
+
+  .header__book {
+    padding: 10px;
+    max-width: 400px;
+    height: 210px;
+  }
+
+  .header__text {
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+
+  .header__btn {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .slider-dots__number {
+    font-size: 34px;
+    line-height: 45px;
+  }
+
   .visit__content {
     margin-right: 20px;
   }
@@ -174,6 +222,21 @@
 }
 
 @media (max-width: 1040px) {
+
+  .header__title {
+    font-size: 50px;
+    line-height: 70px;
+
+    span {
+      font-size: 86px;
+      line-height: 110px;
+    }
+  }
+
+  .header::after {
+    width: 100px;
+    height: 400px;
+  }
   
   .benefits__inner {
     display: flex;
@@ -195,6 +258,10 @@
 }
 
 @media (max-width: 970px) {
+
+  .header__title {
+    top: 10%;
+  }
 
   .visit {
     padding: 0px 0 60px 0;
@@ -219,6 +286,78 @@
 
 @media (max-width: 900px) {
 
+  .menu__list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: rgba(#1C1C1C, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 100px 20px 20px 20px;
+    transform: translateX(-100%);
+    overflow: auto;
+    flex-direction: column;
+    transition: transform 0.3s;
+    text-align: center;
+    display: block;
+  }
+
+  .menu__list--active {
+    transform: translateX(0%);
+  }
+
+  .menu__item {
+    margin: 0 0 25px 0;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .header::after {
+    display: none;
+  }
+
+  .header__aside {
+    top: 0;
+    left: 90px;
+    padding: 15px 5px;
+    margin-top: 20px;
+  }
+
+  .header__aside-list {
+    flex-direction: row;
+  }
+
+  .header__aside-item {
+    padding: 0 10px;
+  }
+
+  .header__aside-item:last-child {
+    transform: none;
+    padding-right: 0;
+  }
+
+  .header__aside-item--line {
+    display: none;
+  }
+
+  .header__title {
+    top: 6%;
+    width: 100%;
+    font-size: 40px;
+    line-height: 60px;
+
+    span {
+      text-align: center;
+    }
+  }
+
+  .about {
+    padding: 90px 0 90px;
+  }
+
   .visit__item {
    flex-direction: column;
    margin: 0 0 60px 0;
@@ -238,11 +377,17 @@
   .visit__image {
     width: 100%;
     max-height: 350px;
-    // max-width: 100%;
   }
 
   .benefits__title {
     margin-bottom: 110px;
+  }
+
+  .dream__wrapper {
+    &::before {
+      top: 236px;
+      left: -310px;
+    }
   }
 
   .reviews-slider {
@@ -257,8 +402,20 @@
 
 @media (max-width: 750px) {
 
-  .about {
-    padding: 100px 0 70px;
+  .header__book {
+    padding: 15px;
+    height: 150px;
+  }
+
+  .header__text {
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 15px;
+    padding: 0;
+
+    &::before {
+      display: none;
+    }
   }
 
   .title {
@@ -364,8 +521,42 @@
 
 @media (max-width: 650px) {
 
+  .header__title {
+    top: 5%;
+    width: 100%;
+    font-size: 30px;
+    line-height: 50px;
+
+    span {
+      font-size: 60px;
+      line-height: 90px;
+    }
+  }
+  .header__slider {
+    margin-bottom: 20px;
+  }
+
+  .header__book {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    height: auto;
+  }
+
+  .header__slider-dots {
+    bottom: 200px;
+  }
+  .about {
+    padding-top: 60px;
+  }
+
+  .about__box {
+    display: block;
+  }
+
   .visit {
-    padding: 0px 0 40px 0;
+    padding: 0;
   }
 
   .about__text {
@@ -384,7 +575,7 @@
   }
 
   .tours {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 
   .tours__title {
@@ -447,9 +638,42 @@
       display: none;
     }
   }
+
+  .contacts__inner {
+    display: block;
+  }
 }
 
 @media (max-width: 550px) {
+
+  .header__top-inner {
+    padding: 15px 5px;
+  }
+
+  .header__aside {
+    margin-top: 0;
+  }
+
+  .header__title {
+    font-size: 28px;
+  }
+
+  .header__text {
+    font-size: 18px;
+  }
+
+  .header__btn {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .slider-dots {
+
+    .slick-dots li button{
+      
+      width: 90px;
+    }
+  }
 
   .visit__title {
     text-align: center;
@@ -481,9 +705,30 @@
     font-size: 25px;
     line-height: 30px;
   }
+
+  .dream__wrapper {
+    &::before {
+      top: 212px;
+      left: -268px;
+    }
+  }
 }
 
 @media (max-width: 450px) {
+
+  .slider-dots__number {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .header__title {
+    line-height: 40px;
+    span {
+      text-align: left;
+      font-size: 50px;
+      line-height: 70px;
+    }
+  }
 
   .visit__image {
     max-height: 280px;
@@ -584,8 +829,36 @@
 
 @media (max-width: 400px) {
 
+  .title {
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+  }
+
+  .menu__list {
+    width: 60%;
+  }
+
+  .header__title {
+    span {
+      font-size: 45px;
+    }
+  }
+
+  .visit__title {
+    margin: 0 0 50px 0;
+  }
+
   .visit__image {
     max-height: 250px;
+  }
+
+  .visit__subtitle {
+    font-size: 20px;
+  }
+
+  .visit__text {
+    font-size: 18px;
   }
 
   .about__link {
@@ -594,18 +867,37 @@
     text-align: center;
   }
 
-  .benefits__title {
-    margin-bottom: 60px;
-    font-size: 35px;
-    line-height: 35px;
-  }
-
   .benefits {
     padding-bottom: 60px;
   }
 
+  .benefits__title {
+    margin-bottom: 50px;
+  }
+
+  .benefits__subtitle {
+    font-size: 20px;
+  }
+
   .benefits__item {
     margin: 15px 0;
+  }
+
+  .tours-slider {
+    height: 460px;
+  }
+
+  .tours-slider__item {
+    padding: 40px 15px;
+  }
+
+  .tours-slider__title {
+    font-size: 24px;
+  }
+
+  .tours-slider__text,
+  .tours-slider__link {
+    font-size: 18px;
   }
 
   .dream {
@@ -625,6 +917,13 @@
   }
 
   .footer__item:not(:last-child) {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .dream__title span:nth-child(2) {
+    font-size: 68px;
+    line-height: 90px;
   }
 }

@@ -12,35 +12,41 @@
 </head>
 <body>
  
-<!-- <div class="wrapper">
-  <header class="header">
+<div class="wrapper">
+  <header class="header" id="main-page">
     <div class="header__top">
       <div class="container">
         <div class="header__top-inner">
           <nav class="menu">
+            <div class="burger">
+              <span class="burger__line burger__line-first"></span>
+              <span class="burger__line burger__line-second"></span>
+              <span class="burger__line burger__line-third"></span>
+              <span class="burger__line burger__line-fourth"></span>
+            </div>
             <ul class="menu__list">
               <li class="menu__item">
-                <a class="menu__link" href="#">
+                <a class="menu__link" href="#about">
                   About
                 </a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#">
+                <a class="menu__link" href="#reasons">
                   Reasons to visit
                 </a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#">
+                <a class="menu__link" href="#benefits">
                   Why choose us
                 </a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#">
+                <a class="menu__link" href="#tours">
                   Tours
                 </a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#">
+                <a class="menu__link" href="#reviews">
                   Rewiews
                 </a>
               </li>
@@ -51,17 +57,23 @@
           <ul class="header__aside-list">
             <li class="header__aside-item">
               <a class="header__aside-link" href="#">
-                <img src="images/header/youtube.svg" alt="Ютуб">
+                <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.4543 1.31548C16.9598 0.357412 16.4232 0.181188 15.3306 0.114173C14.2391 0.0335074 11.4945 0 9.11678 0C6.73448 0 3.98873 0.0335075 2.89841 0.112932C1.80809 0.181188 1.27033 0.356171 0.771315 1.31548C0.262042 2.2723 0 3.92037 0 6.82186C0 6.82434 0 6.82558 0 6.82558C0 6.82806 0 6.82931 0 6.82931V6.83179C0 9.72087 0.262042 11.3813 0.771315 12.3282C1.27033 13.2863 1.80695 13.46 2.89727 13.5407C3.98873 13.6102 6.73448 13.6512 9.11678 13.6512C11.4945 13.6512 14.2391 13.6102 15.3317 13.542C16.4243 13.4613 16.9609 13.2875 17.4554 12.3295C17.9692 11.3826 18.229 9.72211 18.229 6.83303C18.229 6.83303 18.229 6.82931 18.229 6.82682C18.229 6.82682 18.229 6.82434 18.229 6.8231C18.229 3.92037 17.9692 2.2723 17.4543 1.31548ZM6.83588 10.5486V3.10254L12.5324 6.82558L6.83588 10.5486Z" fill="#CECECE"/>
+                  </svg>
               </a>
             </li>
             <li class="header__aside-item">
               <a class="header__aside-link" href="#">
-                <img src="images/header/facebook.svg" alt="Фейсбук">
+                <svg width="10" height="21" viewBox="0 0 10 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.19656 6.97621V4.49418C6.19656 3.80914 6.70698 3.25317 7.33588 3.25317H8.47519V0.150635H6.19656C4.30872 0.150635 2.77863 1.81732 2.77863 3.87368V6.97621H0.5V10.0787H2.77863V20.0069H6.19656V10.0787H8.47519L9.6145 6.97621H6.19656Z" fill="#CECECE"/>
+                  </svg>
               </a>
             </li>
             <li class="header__aside-item">
               <a class="header__aside-link" href="#">
-                <img src="images/header/twitter.svg" alt="Твиттер">
+                <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.229 2.41627C17.5511 2.74017 16.8288 2.95487 16.0757 3.05912C16.8504 2.55526 17.4417 1.7635 17.7197 0.809155C16.9974 1.27826 16.1999 1.60961 15.35 1.79452C14.6641 0.999031 13.6866 0.506348 12.6202 0.506348C10.5512 0.506348 8.8855 2.3356 8.8855 4.57812C8.8855 4.90078 8.91057 5.21104 8.97209 5.5064C5.86518 5.34134 3.11602 3.71934 1.26919 1.24847C0.946769 1.85781 0.757643 2.55526 0.757643 3.30608C0.757643 4.71587 1.42414 5.96557 2.41762 6.68908C1.8172 6.67667 1.22818 6.4868 0.72916 6.18771C0.72916 6.20012 0.72916 6.21626 0.72916 6.23239C0.72916 8.21057 2.02456 9.85367 3.72327 10.2322C3.41908 10.3228 3.08754 10.3662 2.74347 10.3662C2.50421 10.3662 2.26268 10.3513 2.03595 10.2967C2.52016 11.9088 3.89417 13.094 5.52795 13.1324C4.25647 14.2158 2.64207 14.8686 0.894361 14.8686C0.587885 14.8686 0.293943 14.8537 0 14.8128C1.65542 15.9756 3.61732 16.6395 5.73302 16.6395C12.6099 16.6395 16.3696 10.4345 16.3696 5.05591C16.3696 4.87596 16.3639 4.70222 16.356 4.52972C17.0977 3.95637 17.7209 3.2403 18.229 2.41627Z" fill="#CECECE"/>
+                  </svg>
               </a>
             </li>
             <li class="header__aside-item header__aside-item--line"></li>
@@ -119,10 +131,10 @@
     </div>
   </header>
 </div>   
- -->
+
 <main>
 
-  <section class="about">
+  <section class="about" id="about">
     <div class="container">
       <div class="about__text">
         <p>
@@ -134,13 +146,13 @@
       </div>
 
       <div class="about__box">
-        <a class="about__link" href="#">See reviews</a>
+        <a class="about__link" href="#reviews">See reviews</a>
       </div>
 
     </div>
   </section>
 
-  <section class="visit">
+  <section class="visit" id="reasons">
     <img class="visit__bg" src="images/visit/visit-bg.png" alt="people climbing">
     <div class="container">
 
@@ -203,7 +215,7 @@
     </div>
   </section>
 
-  <section class="benefits">
+  <section class="benefits" id="benefits">
     <h2 class="benefits__title title">
       Why people choose us
     </h2>
@@ -266,7 +278,7 @@
 
   </section>
 
-  <section class="tours">
+  <section class="tours" id="tours">
     <div class="container">
       <div class="tours__title title">Tours</div>
     </div>
@@ -354,7 +366,7 @@
     </div>
   </section>
 
-  <section class="reviews">
+  <section class="reviews"  id="reviews">
       <div class="container">
         <h2 class="reviews__title title">What our clients say about us?</h2>
 
@@ -426,7 +438,7 @@
       </div>
   </section>
 
-  <section class="contacts">
+  <section class="contacts" id="contacts">
     <div class="container">
       <div class="contacts__inner">
         <form class="contacts__form">
@@ -456,37 +468,37 @@
   
     <ul class="footer__menu">
       <li class="footer__item">
-        <a class="footer__link" href="#">
+        <a class="footer__link" href="#about">
           About
         </a>
       </li>
       <li class="footer__item">
-        <a class="footer__link" href="#">
+        <a class="footer__link" href="#reasons">
           Reasons to visit
         </a>
       </li>
       <li class="footer__item">
-        <a class="footer__link" href="#">
+        <a class="footer__link" href="#benefits">
           Why choose us
         </a>
       </li>
       <li class="footer__item">
-        <a class="footer__link" href="#">
+        <a class="footer__link" href="#tours">
           Tours
         </a>
       </li>
       <li class="footer__item">
-        <a class="footer__link" href="#">
+        <a class="footer__link" href="#main-page">
           Offer
         </a>
       </li>
       <li class="footer__item">
-        <a class="footer__link" href="#">
+        <a class="footer__link" href="#reviews">
           Rewiews
         </a>
       </li>
       <li class="footer__item">
-        <a class="footer__link" href="#">
+        <a class="footer__link" href="#contacts">
           Contacts
         </a>
       </li>
