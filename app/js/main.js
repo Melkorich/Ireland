@@ -1,5 +1,16 @@
 $(function(){
 
+  let scrollTop = document.querySelector('.scroll-top');
+
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 100) {
+      scrollTop.classList.add('scroll-top--active');
+    } else {
+      scrollTop.classList.remove('scroll-top--active');
+    }
+  })
+  
+
   $('.burger, menu').on('click', function() {
     $('.menu__list').toggleClass('menu__list--active');
     $('.burger').toggleClass('burger--active');
@@ -56,11 +67,11 @@ $(function(){
   $(function(){
     $("a[href^='#']").click(function(){
             var _href = $(this).attr("href");
-            $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, 1000);
+            $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, 500);
             return false;
     });
-});
+  });
 
-
+new WOW().init();
  
 });

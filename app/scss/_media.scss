@@ -688,6 +688,10 @@
     font-size: 22px;
   }
 
+  .visit__image {
+    max-height: 250px;
+  }
+
   .about {
     padding: 50px 0 50px;
   }
@@ -731,7 +735,7 @@
   }
 
   .visit__image {
-    max-height: 280px;
+    max-height: 220px;
   }
 
   .visit__image::before {
@@ -850,7 +854,7 @@
   }
 
   .visit__image {
-    max-height: 250px;
+    max-height: 200px;
   }
 
   .visit__subtitle {
