@@ -27,6 +27,8 @@ $(function(){
     arrows: false,
     fade: true,
     asNavFor: '.header__slider-dots',
+    autoplay: true,
+    autoplaySpeed: 3500,
   });
 
   $('.header__slider-dots').slick({

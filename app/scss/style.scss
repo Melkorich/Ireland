@@ -467,6 +467,10 @@
   &__subtitle {
     margin: 0 0 30px 0;
   }
+
+  &__text {
+    line-height: 29px;
+  }
 }
 
 /*section visit end*/
@@ -586,7 +590,7 @@
   &__item {
     display: flex;
     flex-direction: column;
-    padding: 92px 50px 120px;
+    padding: 92px 15px 50px 118px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -887,6 +891,9 @@
     max-width: 445px;
     max-height: 180px;
     overflow: auto;
+    p {
+      padding-right: 5px;
+    }
   }
 
   &__item {

@@ -116,6 +116,10 @@
     left: 0;
   } 
 
+  .visit__image {
+    min-width: 500px;
+  }
+
   .tours {
     margin-bottom: 150px;
   }
@@ -195,8 +199,6 @@
   }
 
   .visit__image {
-    flex: 1 0 500px;
-    height: 340px;
     position: relative;
 
     &::before {
@@ -270,7 +272,6 @@
   .dream__wrapper {
     height: 830px;
     &::before {
-      // left: -300px;
       top: 210px;
     }
   }
@@ -375,6 +376,7 @@
   }
 
   .visit__image {
+    min-width: 100%;
     width: 100%;
     max-height: 350px;
   }
@@ -712,8 +714,7 @@
 
   .dream__wrapper {
     &::before {
-      top: 212px;
-      left: -268px;
+      display: none;
     }
   }
 }
@@ -761,12 +762,6 @@
 
   .benefits__img {
     top: 0;
-  }
-
-  .dream__wrapper {
-    &::before {
-      display: none;
-    }
   }
 
   .dream__title {
