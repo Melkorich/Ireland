@@ -65,6 +65,7 @@ $(function(){
     ratedFill: '#A5964C',
     spacing   : '3px',
     readOnly: true,
+  
   });
 
   $(function(){
@@ -76,5 +77,32 @@ $(function(){
   });
 
 new WOW().init();
+
+
+  // const slider = document.querySelector('.swiper-container');
+  let swiper = new Swiper(".swiper-container", {
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        centeredSlides: false,
+      },
+
+      1040: {
+        slidesPerView: 'auto',
+        spaceBetween: 120,
+        centeredSlides: true,
+        grabCursor: true,
+      },
+    },
+
+
+  });
  
 });
