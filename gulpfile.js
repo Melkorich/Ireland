@@ -55,7 +55,7 @@ function images(){
             {cleanupIDs: false}
         ]
     })
-  ]))
+  ])) 
   .pipe(dest('dist/images'))
 }
 

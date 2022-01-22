@@ -9,7 +9,7 @@ $(function(){
       scrollTop.classList.remove('scroll-top--active');
     }
   })
-  
+   
 
   $('.burger, menu').on('click', function() {
     $('.menu__list').toggleClass('menu__list--active');
@@ -41,7 +41,7 @@ $(function(){
   $('.tours-slider').slick({
     arrows: false,
     dots: true,
-    infinite: true,
+    infinite: true, 
   });
 
   $('.reviews-slider').slick({
@@ -76,22 +76,26 @@ $(function(){
     });
   });
 
+});
+
 new WOW().init();
 
 
   // const slider = document.querySelector('.swiper-container');
-  let swiper = new Swiper(".swiper-container", {
+  let swiper = new Swiper(".tours__slider", {
     loop: true,
+    centeredSlides: true,
+    
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
-    },
+    }, 
 
     breakpoints: {
       320: {
         slidesPerView: 1,
         spaceBetween: 30,
-        centeredSlides: false,
+        // centeredSlides: false,
       },
 
       1040: {
@@ -104,5 +108,3 @@ new WOW().init();
 
 
   });
- 
-});
