@@ -582,6 +582,7 @@
   &__slider {
     overflow: hidden;
     padding: 50px 0 60px;
+    margin: 0 auto;
   }
 
   &__item {
@@ -646,28 +647,26 @@
 
 .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: 0px;
-  width: 100%;
-  margin: 0 auto;
-}
+  left: 50%;
+  transform:translateX(-50%);
+} 
 
 .swiper-pagination-bullet {
   width: 13px;
   height: 13px;
   background-color: #A5964C;
-  margin: 0 13px;
 }
 
 .swiper-slide {
   opacity: 0.5;
-  max-width:800px;
-  transition: transform .3s;
+  width: 800px;
+  transition: transform .3s; 
 } 
 
 .swiper-slide-active {
   transform: scale(1.1);
-  transition: transform .3s;
   opacity: 1;
-  max-width: 906px;
+  width: 906px;
 }
 
 /*section tours end*/
