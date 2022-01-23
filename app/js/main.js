@@ -78,16 +78,17 @@ $(function(){
 
 });
 
-new WOW().init();
+wow = new WOW({ mobile: false })
+wow.init();
 
 let swiper = new Swiper(".tours__slider", {
   loop: true,
   centeredSlides: true,
   
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  }, 
+  // pagination: {
+  //   el: ".swiper-pagination",
+  //   clickable: true,
+  // }, 
 
   breakpoints: {
     320: {
@@ -98,7 +99,7 @@ let swiper = new Swiper(".tours__slider", {
 
     1040: {
       slidesPerView: 'auto',
-      spaceBetween: 120,
+      spaceBetween: 130,
       centeredSlides: true,
       grabCursor: true,
     },

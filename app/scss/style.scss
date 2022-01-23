@@ -645,17 +645,17 @@
   padding: 0;
 }
 
-.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: 0px;
-  left: 50%;
-  transform:translateX(-50%);
-} 
+// .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+//   bottom: 0px;
+//   left: 50%;
+//   transform:translateX(-50%);
+// } 
 
-.swiper-pagination-bullet {
-  width: 13px;
-  height: 13px;
-  background-color: #A5964C;
-}
+// .swiper-pagination-bullet {
+//   width: 13px;
+//   height: 13px;
+//   background-color: #A5964C;
+// }
 
 .swiper-slide {
   opacity: 0.5;
